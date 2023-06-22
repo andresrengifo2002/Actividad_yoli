@@ -1,0 +1,15 @@
+package com.example.actividad_yoli;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ActividadR {
+    private List<Mi_Proyecto> result = new ArrayList<Mi_Proyecto>();
+
+    public List<Mi_Proyecto>getResult(){
+        return result;
+    }
+    public void setResult(List<Mi_Proyecto> result){
+        this.result = result;
+    }
+}
