@@ -6,7 +6,7 @@ public class Mi_Proyecto {
     private int number;
     private String nombre;
 
-
+    private String url;
 
     public String getUrl() {
         return url;
@@ -16,7 +16,7 @@ public class Mi_Proyecto {
         this.url = url;
     }
 
-    private String url;
+
 
     public int getNumber() {
         return number;
