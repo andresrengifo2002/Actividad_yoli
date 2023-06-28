@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         retrofit = new Retrofit.Builder()
-                .baseUrl("https://api.chucknorris.io/jokes/random")
+                .baseUrl("https://api.chucknorris.io/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
