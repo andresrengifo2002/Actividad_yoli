@@ -5,14 +5,25 @@ import android.media.Image;
 public class Mi_Proyecto {
     private int number;
     private String nombre;
-    private Image Imagen;
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    private String url;
 
     public int getNumber() {
         return number;
     }
 
     public void setNumber(int number) {
-        this.number = number;
+        String[] urlPartes=url.split("/");
+        int id= Integer.parseInt( urlPartes[urlPartes.length-1]);
+
     }
 
     public String getNombre() {
@@ -23,11 +34,5 @@ public class Mi_Proyecto {
         this.nombre = nombre;
     }
 
-    public Image getImagen() {
-        return Imagen;
-    }
 
-    public void setImagen(Image imagen) {
-        Imagen = imagen;
-    }
 }
