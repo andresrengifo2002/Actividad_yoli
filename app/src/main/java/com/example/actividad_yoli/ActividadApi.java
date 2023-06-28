@@ -6,6 +6,6 @@ import retrofit2.http.GET;
 public interface ActividadApi {
 
 
-    @GET("panaderia")
-    Call<ActividadR> obtenerListpanaderia();
+    @GET("random")
+    Call<ActividadR> obtenerListrandom();
 }

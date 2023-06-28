@@ -31,14 +31,14 @@ public class MainActivity extends AppCompatActivity {
     Retrofit retrofit;
 
 
-    private final String TAG = "pokeapi";
+    private final String TAG = "chukapi";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        recyclerView = findViewById((R.id.Recycler1));
+        recyclerView = findViewById((R.id.recycler1));
 
 
         listaMi_proyectoAdapter = new ListaMi_ProyectoAdapter(this);
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         retrofit = new Retrofit.Builder()
-                .baseUrl("http://127.0.0.1:8000/api/panaderia/")
+                .baseUrl("https://api.chucknorris.io/jokes/random")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void obtenerDatos(){
         ActividadApi service = retrofit.create(ActividadApi.class);
-        Call<ActividadR>actividadRCall = service.obtenerListpanaderia();
+        Call<ActividadR>actividadRCall = service.obtenerListrandom();
         actividadRCall.enqueue(new Callback<ActividadR>() {
             @Override
             public void onResponse(Call<ActividadR> call, Response<ActividadR> response) {
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     private void setImageView() {
-        String url = "https://i1.sndcdn.com/avatars-000487158516-03ypka-t500x500.jpg";
+        String url = "https://api.chucknorris.io/img/chucknorris_logo_coloured_small@2x.png";
         Glide.with(this)
                 .load(url)
 

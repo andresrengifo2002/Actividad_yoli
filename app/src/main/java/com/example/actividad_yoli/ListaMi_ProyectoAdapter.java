@@ -56,14 +56,14 @@ public class ListaMi_ProyectoAdapter extends RecyclerView.Adapter<ListaMi_Proyec
             holder.nombreTextView.setText(m.getNombre()); //envio del nombre al texto
 
             Glide.with(context)
-                    .load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6" + m.getNumber() + ".png")
+                    .load("https://assets.chucknorris.host/img/avatar/chuck-norris.png")
                     .into(holder.imagen);
         }
 
 
         public void add(ArrayList<Mi_Proyecto> listaMi_proyectos){
             dataset.addAll(listaMi_proyectos);
-            notifyDataSetChanged(); // reseteo de la vista
+            notifyDataSetChanged();
         }
     }
 
