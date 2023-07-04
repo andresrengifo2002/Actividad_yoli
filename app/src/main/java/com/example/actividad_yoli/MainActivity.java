@@ -49,12 +49,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         retrofit = new Retrofit.Builder()
-                .baseUrl("https://api.chucknorris.io/")
+                .baseUrl("https://api.chucknorris.io/jokes/random")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
         imageView = findViewById(R.id.imagenGlide);
         obtenerDatos();
+        setImageView();
 
     }
     private void obtenerDatos(){
@@ -65,10 +66,10 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<ActividadR> call, Response<ActividadR> response) {
                 if (response.isSuccessful()){
                     ActividadR actividadR = response.body();
-                    List<Mi_Proyecto> listami_proyecto = actividadR.getResult();
+                    List<Mi_Proyecto> listami_proyecto = actividadR.getCategories();
                     for (int i = 0; i < listami_proyecto.size(); i++) {
                         Mi_Proyecto m = listami_proyecto.get(i);
-                        Log.e(TAG, "mi_proyecto" + m.getNombre());
+                        Log.e(TAG, "mi_proyecto" + m.getValues());
                     }
                     listaMi_proyectoAdapter.add((ArrayList<Mi_Proyecto>) listami_proyecto);
                 }

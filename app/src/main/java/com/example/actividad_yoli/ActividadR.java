@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ActividadR {
-    private List<Mi_Proyecto> result = new ArrayList<Mi_Proyecto>();
+    private List<Mi_Proyecto> categories = new ArrayList<Mi_Proyecto>();
 
-    public List<Mi_Proyecto>getResult(){
-        return result;
+    public List<Mi_Proyecto>getCategories(){
+        return categories;
     }
     public void setResult(List<Mi_Proyecto> result){
-        this.result = result;
+        this.categories = result;
     }
 }

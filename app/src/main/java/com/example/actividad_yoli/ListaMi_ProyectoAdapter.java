@@ -53,7 +53,7 @@ public class ListaMi_ProyectoAdapter extends RecyclerView.Adapter<ListaMi_Proyec
     @Override
         public void onBindViewHolder(ViewHolder holder, int position) {
             Mi_Proyecto m = dataset.get(position);
-            holder.nombreTextView.setText(m.getNombre()); //envio del nombre al texto
+            holder.nombreTextView.setText(m.getValues()); //envio del nombre al texto
 
             Glide.with(context)
                     .load("https://assets.chucknorris.host/img/avatar/chuck-norris.png")

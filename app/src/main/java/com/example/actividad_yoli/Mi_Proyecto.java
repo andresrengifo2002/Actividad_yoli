@@ -3,10 +3,20 @@ package com.example.actividad_yoli;
 import android.media.Image;
 
 public class Mi_Proyecto {
-    private int number;
-    private String nombre;
+    private int id;
 
     private String url;
+
+    private String values;
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getUrl() {
         return url;
@@ -16,25 +26,11 @@ public class Mi_Proyecto {
         this.url = url;
     }
 
-
-
-    public int getNumber() {
-        return number;
+    public String getValues() {
+        return values;
     }
 
-    public void setNumber(int number) {
-        String[] urlPartes=url.split("/");
-        int id= Integer.parseInt( urlPartes[urlPartes.length-1]);
-
+    public void setValues(String values) {
+        this.values = values;
     }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-
 }
